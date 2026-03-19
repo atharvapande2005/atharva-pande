@@ -3,83 +3,446 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Digital Fablab Portfolio</title>
-
+<title>Atharva Pande — Welcome</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
-
-/* Reset */
-body{
-margin:0;
-font-family: Arial, sans-serif;
-color:white;
-text-align:center;
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
+:root {
+  --accent: #2563eb;
+  --accent2: #7c3aed;
+  --accent-light: #eff6ff;
+  --text: #0f172a;
+  --muted: #64748b;
 }
 
-/* Animated Gradient Background */
-body{
-background: linear-gradient(270deg, #ff6b6b, #6b6bff, #00c9a7);
-background-size: 600% 600%;
-animation: gradientMove 10s ease infinite;
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: linear-gradient(160deg, #eef4ff 0%, #faf8ff 45%, #f0f4ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
-@keyframes gradientMove {
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
+/* Blobs */
+.blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  animation: drift 14s ease-in-out infinite alternate;
+}
+.blob-1 { width: 520px; height: 520px; background: #93c5fd; opacity: 0.28; top: -160px; right: -100px; animation-delay: 0s; }
+.blob-2 { width: 380px; height: 380px; background: #c4b5fd; opacity: 0.22; bottom: -100px; left: -80px; animation-delay: -5s; }
+.blob-3 { width: 260px; height: 260px; background: #bae6fd; opacity: 0.18; top: 50%; left: 50%; transform: translate(-50%,-50%); animation-delay: -9s; }
+
+@keyframes drift {
+  0%   { transform: translate(0,0) scale(1); }
+  100% { transform: translate(30px, 20px) scale(1.06); }
 }
 
-/* Container */
-.container{
-position:relative;
+/* Floating particles */
+.particles {
+  position: fixed; inset: 0; pointer-events: none; z-index: 0;
+}
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0;
+  animation: floatUp linear infinite;
 }
 
-/* Text (Now Always Visible) */
-.text{
-font-size:42px;
-position:static;
-opacity:1;
-margin:10px 0;
+@keyframes floatUp {
+  0%   { opacity: 0; transform: translateY(0) scale(0); }
+  10%  { opacity: 0.35; }
+  90%  { opacity: 0.15; }
+  100% { opacity: 0; transform: translateY(-100vh) scale(1.2); }
 }
 
-/* Button */
-button{
-margin-top:30px;
-padding:12px 25px;
-font-size:16px;
-border:none;
-border-radius:25px;
-cursor:pointer;
-background:white;
-color:black;
-transition:0.3s;
+/* Main card */
+.card {
+  position: relative; z-index: 2;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(37,99,235,0.12);
+  border-radius: 32px;
+  padding: 64px 72px;
+  max-width: 680px;
+  width: calc(100% - 40px);
+  box-shadow: 0 8px 48px rgba(37,99,235,0.1), 0 2px 12px rgba(37,99,235,0.06);
+  text-align: center;
+  animation: cardIn 0.8s cubic-bezier(0.22,1,0.36,1) both;
 }
 
-button:hover{
-transform:scale(1.1);
-background:black;
-color:white;
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(40px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
+/* Logo pill */
+.logo-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 13px;
+  color: var(--accent);
+  background: var(--accent-light);
+  border: 1px solid rgba(37,99,235,0.2);
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 40px;
+  letter-spacing: -0.2px;
+}
+
+.dot-pulse {
+  width: 7px; height: 7px; border-radius: 50%; background: #22c55e;
+  animation: pulse 2s ease infinite; flex-shrink: 0;
+}
+@keyframes pulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.5); }
+  50% { box-shadow: 0 0 0 5px rgba(34,197,94,0); }
+}
+
+/* Typing area */
+.typing-area {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 44px;
+}
+
+/* Each line */
+.line-wrap {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.line-1 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(14px, 2vw, 17px);
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.line-2 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(36px, 6vw, 62px);
+  font-weight: 800;
+  letter-spacing: -3px;
+  line-height: 1.05;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.line-3 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(14px, 1.8vw, 18px);
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+
+.line-4 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(14px, 1.8vw, 18px);
+  font-weight: 600;
+  color: var(--accent2);
+  letter-spacing: -0.5px;
+}
+
+/* Cursor blink */
+.caret {
+  display: inline-block;
+  width: 3px;
+  height: 1.1em;
+  background: var(--accent);
+  vertical-align: middle;
+  margin-left: 2px;
+  border-radius: 2px;
+  animation: caretBlink 0.9s step-end infinite;
+}
+.caret.hidden { opacity: 0; }
+
+@keyframes caretBlink { 50% { opacity: 0; } }
+
+/* Divider */
+.divider {
+  width: 60px; height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  border-radius: 100px;
+  margin: 0 auto 32px;
+  opacity: 0;
+  transform: scaleX(0);
+  transition: opacity 0.5s, transform 0.6s cubic-bezier(0.22,1,0.36,1);
+}
+.divider.show { opacity: 1; transform: scaleX(1); }
+
+/* CTA button */
+.cta-wrap {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s, transform 0.5s cubic-bezier(0.22,1,0.36,1);
+}
+.cta-wrap.show { opacity: 1; transform: translateY(0); }
+
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 15px 36px;
+  background: linear-gradient(135deg, var(--accent), #1d4ed8);
+  color: #fff;
+  border-radius: 100px;
+  text-decoration: none;
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.28s;
+  box-shadow: 0 6px 24px rgba(37,99,235,0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
+  border-radius: inherit;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(37,99,235,0.45);
+}
+
+.cta-btn:active { transform: translateY(-1px); }
+
+.cta-arrow {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  transition: transform 0.25s;
+}
+.cta-btn:hover .cta-arrow { transform: translateX(3px); }
+.cta-arrow svg { width: 14px; height: 14px; }
+
+/* Social row below button */
+.social-row {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  margin-top: 24px;
+  opacity: 0;
+  transition: opacity 0.5s 0.2s;
+}
+.social-row.show { opacity: 1; }
+
+.soc-icon {
+  width: 38px; height: 38px; border-radius: 10px;
+  border: 1px solid rgba(37,99,235,0.15);
+  background: rgba(255,255,255,0.7);
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; color: var(--muted);
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.05);
+}
+.soc-icon:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+.soc-icon svg { width: 16px; height: 16px; }
+
+/* Corner decoration */
+.corner-tl, .corner-br {
+  position: absolute;
+  width: 40px; height: 40px;
+  pointer-events: none;
+}
+.corner-tl { top: 20px; left: 20px; border-top: 2px solid rgba(37,99,235,0.2); border-left: 2px solid rgba(37,99,235,0.2); border-radius: 8px 0 0 0; }
+.corner-br { bottom: 20px; right: 20px; border-bottom: 2px solid rgba(37,99,235,0.2); border-right: 2px solid rgba(37,99,235,0.2); border-radius: 0 0 8px 0; }
+
+/* Scrolling tag bottom */
+.tagline {
+  position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%);
+  font-size: 12px; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase;
+  display: flex; align-items: center; gap: 8px;
+  z-index: 2; white-space: nowrap;
+  opacity: 0; animation: fadeInUp 0.6s 3s both;
+}
+.tagline::before, .tagline::after {
+  content: ''; flex: 1; width: 30px; height: 1px; background: rgba(37,99,235,0.2);
+}
+@keyframes fadeInUp { from { opacity:0; transform: translateX(-50%) translateY(8px); } to { opacity:1; transform: translateX(-50%) translateY(0); } }
+
+@media (max-width: 600px) {
+  .card { padding: 44px 28px; border-radius: 24px; }
+  .line-2 { letter-spacing: -2px; }
+}
 </style>
 </head>
-
 <body>
 
-<div class="container">
+<!-- Blobs -->
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
 
-<div class="text">Welcome to My Portfolio</div>
-<div class="text">|Future Web Developer|</div>
-<div class="text">|Digital Fab Lab Student|</div>
+<!-- Particles -->
+<div class="particles" id="particles"></div>
 
-<a href="portfolio2.html">
-<button>Visit Portfolio</button>
-</a>
+<!-- Main Card -->
+<div class="card">
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
 
+  <div class="logo-pill">
+    <span class="dot-pulse"></span>
+    Digital Fab Lab
+  </div>
+
+  <div class="typing-area">
+    <div class="line-wrap"><span class="line-1" id="line1"></span><span class="caret" id="caret"></span></div>
+    <div class="line-wrap"><span class="line-2" id="line2"></span></div>
+    <div class="line-wrap"><span class="line-3" id="line3"></span></div>
+    <div class="line-wrap"><span class="line-4" id="line4"></span></div>
+  </div>
+
+  <div class="divider" id="divider"></div>
+
+  <div class="cta-wrap" id="ctaWrap">
+    <a href="portfolio.html" class="cta-btn">
+      Visit Portfolio
+      <span class="cta-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </span>
+    </a>
+    <div class="social-row" id="socialRow">
+      <a href="https://linkedin.com/in/atharva-pande-421824245" target="_blank" class="soc-icon" title="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v2a6 6 0 0 1 2-2z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://instagram.com/atharva_pande05" target="_blank" class="soc-icon" title="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <a href="mailto:atharvapande2005@gmail.com" class="soc-icon" title="Gmail">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+      <a href="https://github.com/atharvapande2005" target="_blank" class="soc-icon" title="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      </a>
+    </div>
+  </div>
 </div>
 
+<div class="tagline">Atharva Pande · 2026</div>
+
+<script>
+/* ── Particles ── */
+const pc = document.getElementById('particles');
+for (let i = 0; i < 18; i++) {
+  const p = document.createElement('div');
+  p.className = 'particle';
+  const size = Math.random() * 5 + 3;
+  p.style.cssText = `
+    width:${size}px; height:${size}px;
+    left:${Math.random()*100}%;
+    bottom:-10px;
+    animation-duration:${Math.random()*12+8}s;
+    animation-delay:${Math.random()*10}s;
+  `;
+  pc.appendChild(p);
+}
+
+/* ── Sequential typing with erase ── */
+const sentences = [
+  { el: 'line1', text: 'Welcome to my portfolio', keep: false },
+  { el: 'line2', text: 'Atharva Pande',           keep: true  },
+  { el: 'line3', text: 'Future Web Developer',    keep: true  },
+  { el: 'line4', text: 'Digital Fab Lab Student', keep: true  },
+];
+
+const caret = document.getElementById('caret');
+let sentenceIdx = 0;
+
+function getEl(id) { return document.getElementById(id); }
+
+function typeText(el, text, speed, cb) {
+  let i = 0;
+  function tick() {
+    if (i <= text.length) {
+      el.textContent = text.slice(0, i);
+      i++;
+      setTimeout(tick, speed);
+    } else { if (cb) cb(); }
+  }
+  tick();
+}
+
+function eraseText(el, speed, cb) {
+  let text = el.textContent;
+  let i = text.length;
+  function tick() {
+    if (i >= 0) {
+      el.textContent = text.slice(0, i);
+      i--;
+      setTimeout(tick, speed / 1.8);
+    } else { if (cb) cb(); }
+  }
+  tick();
+}
+
+function moveCaret(targetId) {
+  const target = getEl(targetId);
+  const wrap = target.closest('.line-wrap');
+  wrap.appendChild(caret);
+}
+
+function runSentence(idx) {
+  if (idx >= sentences.length) {
+    // all done — show divider + CTA
+    caret.classList.add('hidden');
+    setTimeout(() => {
+      document.getElementById('divider').classList.add('show');
+      setTimeout(() => {
+        document.getElementById('ctaWrap').classList.add('show');
+        document.getElementById('socialRow').classList.add('show');
+      }, 300);
+    }, 400);
+    return;
+  }
+
+  const s = sentences[idx];
+  const el = getEl(s.el);
+  moveCaret(s.el);
+
+  // type it
+  typeText(el, s.text, 55, () => {
+    if (!s.keep) {
+      // pause then erase
+      setTimeout(() => {
+        eraseText(el, 55, () => {
+          setTimeout(() => runSentence(idx + 1), 200);
+        });
+      }, 900);
+    } else {
+      // keep it, move to next
+      setTimeout(() => runSentence(idx + 1), 380);
+    }
+  });
+}
+
+// Start after card animation
+setTimeout(() => runSentence(0), 900);
+</script>
 </body>
 </html>
