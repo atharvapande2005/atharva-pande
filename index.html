@@ -7,17 +7,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #f8faff;
-  --surface: #ffffff;
-  --surface2: #f0f4ff;
-  --accent: #2563eb;
-  --accent2: #7c3aed;
-  --accent-light: #eff6ff;
-  --text: #0f172a;
-  --muted: #64748b;
-  --border: rgba(37,99,235,0.13);
-  --shadow: 0 4px 24px rgba(37,99,235,0.08);
-  --shadow-hover: 0 8px 40px rgba(37,99,235,0.15);
+  --bg: #f8faff;
+  --surface: #ffffff;
+  --surface2: #f0f4ff;
+  --accent: #2563eb;
+  --accent2: #7c3aed;
+  --accent-light: #eff6ff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: rgba(37,99,235,0.13);
+  --shadow: 0 4px 24px rgba(37,99,235,0.08);
+  --shadow-hover: 0 8px 40px rgba(37,99,235,0.15);
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -28,19 +28,19 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
 
 /* NAV */
 nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 14px 40px;
-  background: rgba(248,250,255,0.92);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(37,99,235,0.1);
-  box-shadow: 0 1px 16px rgba(37,99,235,0.06);
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 40px;
+  background: rgba(248,250,255,0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(37,99,235,0.1);
+  box-shadow: 0 1px 16px rgba(37,99,235,0.06);
 }
 .nav-logo {
-  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 14px;
-  color: var(--accent); text-decoration: none; letter-spacing: -0.2px;
-  background: var(--accent-light); border: 1px solid rgba(37,99,235,0.2);
-  padding: 6px 14px; border-radius: 100px; white-space: nowrap;
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 14px;
+  color: var(--accent); text-decoration: none; letter-spacing: -0.2px;
+  background: var(--accent-light); border: 1px solid rgba(37,99,235,0.2);
+  padding: 6px 14px; border-radius: 100px; white-space: nowrap;
 }
 .nav-links-desktop { display: flex; gap: 28px; list-style: none; }
 .nav-links-desktop a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
@@ -48,118 +48,118 @@ nav {
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
 .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: 0.3s; }
 .mobile-menu {
-  display: none; position: fixed; top: 65px; right: 0; left: 0;
-  background: rgba(255,255,255,0.98); backdrop-filter: blur(20px);
-  padding: 20px 40px; z-index: 99; border-bottom: 1px solid var(--border);
-  flex-direction: column; gap: 4px;
+  display: none; position: fixed; top: 65px; right: 0; left: 0;
+  background: rgba(255,255,255,0.98); backdrop-filter: blur(20px);
+  padding: 20px 40px; z-index: 99; border-bottom: 1px solid var(--border);
+  flex-direction: column; gap: 4px;
 }
 .mobile-menu.open { display: flex; }
 .mobile-menu a { color: var(--text); text-decoration: none; font-size: 15px; font-weight: 500; padding: 10px 0; border-bottom: 1px solid rgba(37,99,235,0.07); }
 
 /* HERO */
 #home {
-  min-height: 100vh; display: flex; align-items: center; justify-content: center;
-  padding: 100px 40px 60px; position: relative; overflow: hidden;
-  background: linear-gradient(160deg, #eef4ff 0%, #faf8ff 50%, #f0f4ff 100%);
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  padding: 100px 40px 60px; position: relative; overflow: hidden;
+  background: linear-gradient(160deg, #eef4ff 0%, #faf8ff 50%, #f0f4ff 100%);
 }
 .hero-bg {
-  position: absolute; inset: 0; pointer-events: none;
-  background:
-    radial-gradient(ellipse 55% 45% at 75% 35%, rgba(37,99,235,0.08) 0%, transparent 65%),
-    radial-gradient(ellipse 45% 45% at 15% 75%, rgba(124,58,237,0.06) 0%, transparent 65%);
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 55% 45% at 75% 35%, rgba(37,99,235,0.08) 0%, transparent 65%),
+    radial-gradient(ellipse 45% 45% at 15% 75%, rgba(124,58,237,0.06) 0%, transparent 65%);
 }
 .blob { position: absolute; border-radius: 50%; filter: blur(70px); opacity: 0.22; pointer-events: none; }
 .blob-1 { width: 450px; height: 450px; background: #93c5fd; top: -120px; right: -100px; }
 .blob-2 { width: 320px; height: 320px; background: #c4b5fd; bottom: -80px; left: -80px; }
 .hero-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
-  max-width: 980px; width: 100%; align-items: center; position: relative; z-index: 1;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+  max-width: 980px; width: 100%; align-items: center; position: relative; z-index: 1;
 }
 .hero-eyebrow {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 12px; color: var(--accent); letter-spacing: 1.5px;
-  text-transform: uppercase; font-weight: 600; margin-bottom: 18px;
-  background: var(--accent-light); border: 1px solid rgba(37,99,235,0.2);
-  padding: 5px 14px; border-radius: 100px;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; color: var(--accent); letter-spacing: 1.5px;
+  text-transform: uppercase; font-weight: 600; margin-bottom: 18px;
+  background: var(--accent-light); border: 1px solid rgba(37,99,235,0.2);
+  padding: 5px 14px; border-radius: 100px;
 }
 .dot-pulse {
-  width: 7px; height: 7px; border-radius: 50%; background: #22c55e;
-  animation: pulse 2s ease infinite; flex-shrink: 0;
+  width: 7px; height: 7px; border-radius: 50%; background: #22c55e;
+  animation: pulse 2s ease infinite; flex-shrink: 0;
 }
 @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.5); } 50% { box-shadow: 0 0 0 5px rgba(34,197,94,0); } }
 h1 {
-  font-family: 'Syne', sans-serif; font-size: clamp(34px, 4.5vw, 54px);
-  font-weight: 800; line-height: 1.07; letter-spacing: -2px; color: var(--text); margin-bottom: 16px;
+  font-family: 'Syne', sans-serif; font-size: clamp(34px, 4.5vw, 54px);
+  font-weight: 800; line-height: 1.07; letter-spacing: -2px; color: var(--text); margin-bottom: 16px;
 }
 .hero-name-accent {
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
 .hero-sub { font-size: 16px; color: var(--muted); line-height: 1.75; margin-bottom: 36px; max-width: 420px; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
 .btn-primary {
-  display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px;
-  background: linear-gradient(135deg, var(--accent), #1d4ed8); color: #fff;
-  border-radius: 100px; text-decoration: none; font-weight: 600; font-size: 14px;
-  transition: all 0.25s; border: none; cursor: pointer;
-  box-shadow: 0 4px 16px rgba(37,99,235,0.3);
+  display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px;
+  background: linear-gradient(135deg, var(--accent), #1d4ed8); color: #fff;
+  border-radius: 100px; text-decoration: none; font-weight: 600; font-size: 14px;
+  transition: all 0.25s; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(37,99,235,0.3);
 }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,99,235,0.4); }
 .btn-outline {
-  display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px;
-  background: var(--surface); color: var(--accent); border-radius: 100px;
-  text-decoration: none; font-weight: 500; font-size: 14px;
-  border: 1.5px solid rgba(37,99,235,0.25); transition: all 0.25s; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px;
+  background: var(--surface); color: var(--accent); border-radius: 100px;
+  text-decoration: none; font-weight: 500; font-size: 14px;
+  border: 1.5px solid rgba(37,99,235,0.25); transition: all 0.25s; cursor: pointer;
 }
 .btn-outline:hover { border-color: var(--accent); background: var(--accent-light); transform: translateY(-2px); }
 
 /* AGREEMENT BUTTON */
 .btn-agreement {
-  display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px;
-  background: linear-gradient(135deg, #7c3aed, #5b21b6); color: #fff;
-  border-radius: 100px; font-weight: 600; font-size: 14px;
-  transition: all 0.25s; border: none; cursor: pointer;
-  box-shadow: 0 4px 16px rgba(124,58,237,0.3); white-space: nowrap;
+  display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px;
+  background: linear-gradient(135deg, #7c3aed, #5b21b6); color: #fff;
+  border-radius: 100px; font-weight: 600; font-size: 14px;
+  transition: all 0.25s; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(124,58,237,0.3); white-space: nowrap;
 }
 .btn-agreement:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(124,58,237,0.45); }
 
 /* MODAL OVERLAY */
 .modal-overlay {
-  display: none; position: fixed; inset: 0; z-index: 999;
-  background: rgba(15,23,42,0.55); backdrop-filter: blur(8px);
-  align-items: center; justify-content: center; padding: 20px;
+  display: none; position: fixed; inset: 0; z-index: 999;
+  background: rgba(15,23,42,0.55); backdrop-filter: blur(8px);
+  align-items: center; justify-content: center; padding: 20px;
 }
 .modal-overlay.open { display: flex; animation: fadeOverlay 0.25s ease; }
 @keyframes fadeOverlay { from { opacity: 0; } to { opacity: 1; } }
 
 .modal-box {
-  background: #fff; border-radius: 24px; max-width: 640px; width: 100%;
-  max-height: 88vh; display: flex; flex-direction: column;
-  box-shadow: 0 32px 80px rgba(15,23,42,0.25), 0 0 0 1px rgba(37,99,235,0.1);
-  animation: slideUp 0.3s cubic-bezier(0.34,1.56,0.64,1);
-  overflow: hidden;
+  background: #fff; border-radius: 24px; max-width: 640px; width: 100%;
+  max-height: 88vh; display: flex; flex-direction: column;
+  box-shadow: 0 32px 80px rgba(15,23,42,0.25), 0 0 0 1px rgba(37,99,235,0.1);
+  animation: slideUp 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  overflow: hidden;
 }
 @keyframes slideUp { from { opacity: 0; transform: translateY(40px) scale(0.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
 
 .modal-header {
-  padding: 28px 32px 0;
-  display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+  padding: 28px 32px 0;
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
 }
 .modal-header-left { display: flex; align-items: center; gap: 14px; }
 .modal-icon-wrap {
-  width: 48px; height: 48px; border-radius: 14px; flex-shrink: 0;
-  background: linear-gradient(135deg, #ede9fe, #ddd6fe);
-  display: flex; align-items: center; justify-content: center;
-  border: 1px solid rgba(124,58,237,0.2);
+  width: 48px; height: 48px; border-radius: 14px; flex-shrink: 0;
+  background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(124,58,237,0.2);
 }
 .modal-icon-wrap svg { color: #7c3aed; }
 .modal-title-group { display: flex; flex-direction: column; gap: 2px; }
 .modal-title { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; color: var(--text); letter-spacing: -0.5px; }
 .modal-subtitle { font-size: 12px; color: var(--muted); font-weight: 500; }
 .modal-close {
-  width: 36px; height: 36px; border-radius: 10px; border: 1.5px solid rgba(37,99,235,0.15);
-  background: var(--bg); display: flex; align-items: center; justify-content: center;
-  cursor: pointer; flex-shrink: 0; color: var(--muted); transition: all 0.2s;
+  width: 36px; height: 36px; border-radius: 10px; border: 1.5px solid rgba(37,99,235,0.15);
+  background: var(--bg); display: flex; align-items: center; justify-content: center;
+  cursor: pointer; flex-shrink: 0; color: var(--muted); transition: all 0.2s;
 }
 .modal-close:hover { border-color: #ef4444; color: #ef4444; background: #fef2f2; transform: rotate(90deg); }
 
@@ -171,22 +171,22 @@ h1 {
 
 .agreement-meta { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
 .agreement-badge {
-  display: inline-flex; align-items: center; gap: 6px;
-  font-size: 11px; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase;
-  padding: 5px 12px; border-radius: 100px;
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase;
+  padding: 5px 12px; border-radius: 100px;
 }
 .badge-purple { background: #f5f3ff; color: #7c3aed; border: 1px solid rgba(124,58,237,0.2); }
 .badge-blue   { background: var(--accent-light); color: var(--accent); border: 1px solid rgba(37,99,235,0.2); }
 
 .agreement-section { margin-bottom: 22px; }
 .agreement-section-title {
-  font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700;
-  color: var(--text); letter-spacing: 0.3px; margin-bottom: 10px;
-  display: flex; align-items: center; gap: 8px;
+  font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700;
+  color: var(--text); letter-spacing: 0.3px; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 8px;
 }
 .agreement-section-title::before {
-  content: ''; display: inline-block; width: 4px; height: 14px;
-  border-radius: 2px; background: linear-gradient(180deg, var(--accent), var(--accent2));
+  content: ''; display: inline-block; width: 4px; height: 14px;
+  border-radius: 2px; background: linear-gradient(180deg, var(--accent), var(--accent2));
 }
 .agreement-text { font-size: 13.5px; color: #475569; line-height: 1.78; }
 .agreement-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
@@ -194,10 +194,10 @@ h1 {
 .agreement-list li::before { content: '✦'; color: var(--accent); font-size: 9px; margin-top: 4px; flex-shrink: 0; }
 
 .signature-block {
-  background: linear-gradient(135deg, #f8faff, #f5f3ff);
-  border: 1px solid rgba(37,99,235,0.12); border-radius: 14px;
-  padding: 16px 20px; margin-top: 20px; margin-bottom: 4px;
-  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  background: linear-gradient(135deg, #f8faff, #f5f3ff);
+  border: 1px solid rgba(37,99,235,0.12); border-radius: 14px;
+  padding: 16px 20px; margin-top: 20px; margin-bottom: 4px;
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
 }
 .sig-name { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: var(--accent2); letter-spacing: -0.3px; }
 .sig-role { font-size: 12px; color: var(--muted); margin-top: 2px; }
@@ -205,32 +205,32 @@ h1 {
 .sig-date { font-size: 12px; color: var(--muted); text-align: right; }
 
 .modal-footer {
-  padding: 16px 32px 24px; display: flex; gap: 12px; justify-content: flex-end;
-  border-top: 1px solid rgba(37,99,235,0.07);
+  padding: 16px 32px 24px; display: flex; gap: 12px; justify-content: flex-end;
+  border-top: 1px solid rgba(37,99,235,0.07);
 }
 .btn-modal-close {
-  padding: 11px 24px; border-radius: 100px; font-size: 13.5px; font-weight: 600;
-  border: 1.5px solid rgba(37,99,235,0.2); background: var(--bg); color: var(--muted);
-  cursor: pointer; transition: all 0.2s;
+  padding: 11px 24px; border-radius: 100px; font-size: 13.5px; font-weight: 600;
+  border: 1.5px solid rgba(37,99,235,0.2); background: var(--bg); color: var(--muted);
+  cursor: pointer; transition: all 0.2s;
 }
 .btn-modal-close:hover { border-color: var(--accent); color: var(--accent); }
 .btn-modal-print {
-  padding: 11px 24px; border-radius: 100px; font-size: 13.5px; font-weight: 600;
-  background: linear-gradient(135deg, #7c3aed, #5b21b6); color: #fff;
-  border: none; cursor: pointer; transition: all 0.25s;
-  display: flex; align-items: center; gap: 8px;
-  box-shadow: 0 4px 14px rgba(124,58,237,0.3);
+  padding: 11px 24px; border-radius: 100px; font-size: 13.5px; font-weight: 600;
+  background: linear-gradient(135deg, #7c3aed, #5b21b6); color: #fff;
+  border: none; cursor: pointer; transition: all 0.25s;
+  display: flex; align-items: center; gap: 8px;
+  box-shadow: 0 4px 14px rgba(124,58,237,0.3);
 }
 .btn-modal-print:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(124,58,237,0.4); }
 
 /* SOCIAL */
 .social-row { display: flex; gap: 12px; margin-top: 28px; }
 .social-icon {
-  width: 40px; height: 40px; border-radius: 12px;
-  border: 1.5px solid rgba(37,99,235,0.15); background: var(--surface);
-  display: flex; align-items: center; justify-content: center;
-  text-decoration: none; color: var(--muted); transition: all 0.2s;
-  box-shadow: 0 2px 8px rgba(37,99,235,0.06);
+  width: 40px; height: 40px; border-radius: 12px;
+  border: 1.5px solid rgba(37,99,235,0.15); background: var(--surface);
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; color: var(--muted); transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.06);
 }
 .social-icon:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); box-shadow: 0 4px 14px rgba(37,99,235,0.15); }
 .social-icon svg { width: 17px; height: 17px; }
@@ -239,51 +239,51 @@ h1 {
 .hero-avatar-wrap { display: flex; justify-content: center; align-items: center; z-index: 1; }
 .avatar-ring { position: relative; width: 290px; height: 290px; }
 .avatar-ring::before {
-  content: ''; position: absolute; inset: -5px; border-radius: 50%;
-  background: conic-gradient(var(--accent), var(--accent2), #60a5fa, var(--accent));
-  animation: spin 8s linear infinite;
+  content: ''; position: absolute; inset: -5px; border-radius: 50%;
+  background: conic-gradient(var(--accent), var(--accent2), #60a5fa, var(--accent));
+  animation: spin 8s linear infinite;
 }
 .avatar-ring::after { content: ''; position: absolute; inset: -1px; border-radius: 50%; background: var(--bg); }
 @keyframes spin { to { transform: rotate(360deg); } }
 .avatar-photo {
-  position: absolute; inset: 9px; z-index: 2; border-radius: 50%;
-  background: linear-gradient(135deg, #dbeafe, #ede9fe);
-  display: flex; align-items: center; justify-content: center;
-  overflow: hidden; border: 3px solid #fff;
+  position: absolute; inset: 9px; z-index: 2; border-radius: 50%;
+  background: linear-gradient(135deg, #dbeafe, #ede9fe);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; border: 3px solid #fff;
 }
 .avatar-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
 .avatar-badge {
-  position: absolute; bottom: 18px; right: 6px; z-index: 3;
-  background: #fff; border: 1.5px solid rgba(37,99,235,0.15);
-  border-radius: 12px; padding: 7px 12px;
-  display: flex; align-items: center; gap: 6px;
-  font-size: 12px; font-weight: 600; color: var(--accent);
-  box-shadow: 0 4px 16px rgba(37,99,235,0.12);
+  position: absolute; bottom: 18px; right: 6px; z-index: 3;
+  background: #fff; border: 1.5px solid rgba(37,99,235,0.15);
+  border-radius: 12px; padding: 7px 12px;
+  display: flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 600; color: var(--accent);
+  box-shadow: 0 4px 16px rgba(37,99,235,0.12);
 }
 
 /* SECTIONS */
 section { padding: 90px 40px; }
 .section-inner { max-width: 980px; margin: 0 auto; }
 .section-label {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 11px; color: var(--accent); letter-spacing: 2px;
-  text-transform: uppercase; font-weight: 600; margin-bottom: 10px;
-  background: var(--accent-light); padding: 4px 12px; border-radius: 100px;
-  border: 1px solid rgba(37,99,235,0.15);
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; color: var(--accent); letter-spacing: 2px;
+  text-transform: uppercase; font-weight: 600; margin-bottom: 10px;
+  background: var(--accent-light); padding: 4px 12px; border-radius: 100px;
+  border: 1px solid rgba(37,99,235,0.15);
 }
 h2 {
-  font-family: 'Syne', sans-serif; font-size: clamp(26px, 3.5vw, 40px);
-  font-weight: 700; letter-spacing: -1.5px; line-height: 1.12;
-  color: var(--text); margin-bottom: 48px;
+  font-family: 'Syne', sans-serif; font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 700; letter-spacing: -1.5px; line-height: 1.12;
+  color: var(--text); margin-bottom: 48px;
 }
 
 /* ABOUT */
 #about { background: #fff; }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
 .code-box {
-  background: #0f172a; border-radius: 16px; padding: 28px;
-  font-family: 'Courier New', monospace; font-size: 13.5px; min-height: 190px;
-  box-shadow: var(--shadow);
+  background: #0f172a; border-radius: 16px; padding: 28px;
+  font-family: 'Courier New', monospace; font-size: 13.5px; min-height: 190px;
+  box-shadow: var(--shadow);
 }
 .code-box-bar { display: flex; gap: 6px; margin-bottom: 16px; }
 .code-dot { width: 11px; height: 11px; border-radius: 50%; }
@@ -297,9 +297,9 @@ h2 {
 .skills-title { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 14px; color: var(--text); }
 .skills-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
 .skill-tag {
-  background: var(--accent-light); border: 1px solid rgba(37,99,235,0.2);
-  color: var(--accent); padding: 6px 14px; border-radius: 100px;
-  font-size: 13px; font-weight: 500; transition: all 0.2s;
+  background: var(--accent-light); border: 1px solid rgba(37,99,235,0.2);
+  color: var(--accent); padding: 6px 14px; border-radius: 100px;
+  font-size: 13px; font-weight: 500; transition: all 0.2s;
 }
 .skill-tag:hover { background: var(--accent); color: #fff; transform: translateY(-1px); }
 
@@ -307,20 +307,20 @@ h2 {
 #education { background: var(--bg); }
 .edu-timeline { position: relative; padding-left: 32px; }
 .edu-timeline::before {
-  content: ''; position: absolute; left: 8px; top: 6px; bottom: 0;
-  width: 2px; background: linear-gradient(to bottom, var(--accent), rgba(37,99,235,0.1)); border-radius: 2px;
+  content: ''; position: absolute; left: 8px; top: 6px; bottom: 0;
+  width: 2px; background: linear-gradient(to bottom, var(--accent), rgba(37,99,235,0.1)); border-radius: 2px;
 }
 .edu-item { position: relative; margin-bottom: 44px; }
 .edu-item::before {
-  content: ''; position: absolute; left: -28px; top: 22px;
-  width: 12px; height: 12px; border-radius: 50%;
-  background: var(--accent); border: 3px solid #fff;
-  box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
+  content: ''; position: absolute; left: -28px; top: 22px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--accent); border: 3px solid #fff;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
 }
 .edu-card {
-  background: #fff; border: 1px solid rgba(37,99,235,0.1);
-  border-radius: 16px; padding: 22px 24px;
-  box-shadow: 0 2px 12px rgba(37,99,235,0.05); transition: box-shadow 0.2s;
+  background: #fff; border: 1px solid rgba(37,99,235,0.1);
+  border-radius: 16px; padding: 22px 24px;
+  box-shadow: 0 2px 12px rgba(37,99,235,0.05); transition: box-shadow 0.2s;
 }
 .edu-card:hover { box-shadow: var(--shadow-hover); }
 .edu-year { font-size: 11px; color: var(--accent); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
@@ -332,31 +332,31 @@ h2 {
 #projects { background: #fff; }
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
 .card {
-  background: var(--surface); border: 1px solid rgba(37,99,235,0.1);
-  border-radius: 20px; overflow: hidden; transition: all 0.3s;
-  box-shadow: 0 2px 14px rgba(37,99,235,0.05);
+  background: var(--surface); border: 1px solid rgba(37,99,235,0.1);
+  border-radius: 20px; overflow: hidden; transition: all 0.3s;
+  box-shadow: 0 2px 14px rgba(37,99,235,0.05);
 }
 .card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); border-color: rgba(37,99,235,0.25); }
 .card-img-placeholder {
-  width: 100%; height: 180px;
-  background: linear-gradient(135deg, #dbeafe, #ede9fe);
-  display: flex; align-items: center; justify-content: center; font-size: 48px;
+  width: 100%; height: 180px;
+  background: linear-gradient(135deg, #dbeafe, #ede9fe);
+  display: flex; align-items: center; justify-content: center; font-size: 48px;
 }
 .card-body { padding: 22px; }
 .card-title { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
 .card-desc { font-size: 14px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
 .card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
 .card-tag {
-  font-size: 11px; padding: 4px 10px; border-radius: 100px;
-  background: var(--accent-light); color: var(--accent);
-  border: 1px solid rgba(37,99,235,0.15); font-weight: 500;
+  font-size: 11px; padding: 4px 10px; border-radius: 100px;
+  background: var(--accent-light); color: var(--accent);
+  border: 1px solid rgba(37,99,235,0.15); font-weight: 500;
 }
 .btn-card {
-  display: inline-flex; align-items: center; gap: 6px;
-  font-size: 13px; font-weight: 600; color: var(--accent);
-  text-decoration: none; border: 1.5px solid rgba(37,99,235,0.25);
-  border-radius: 100px; padding: 8px 18px; transition: all 0.2s;
-  background: var(--accent-light);
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 600; color: var(--accent);
+  text-decoration: none; border: 1.5px solid rgba(37,99,235,0.25);
+  border-radius: 100px; padding: 8px 18px; transition: all 0.2s;
+  background: var(--accent-light);
 }
 .btn-card:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
 
@@ -364,17 +364,17 @@ h2 {
 #fablab { background: var(--bg); }
 .modules-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
 .module-card {
-  background: #fff; border: 1px solid rgba(37,99,235,0.1);
-  border-radius: 18px; overflow: hidden; cursor: pointer;
-  transition: all 0.28s; box-shadow: 0 2px 12px rgba(37,99,235,0.05);
+  background: #fff; border: 1px solid rgba(37,99,235,0.1);
+  border-radius: 18px; overflow: hidden; cursor: pointer;
+  transition: all 0.28s; box-shadow: 0 2px 12px rgba(37,99,235,0.05);
 }
 .module-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); border-color: rgba(37,99,235,0.3); }
 .module-img { height: 130px; display: flex; align-items: center; justify-content: center; font-size: 42px; position: relative; }
 .module-num {
-  position: absolute; top: 10px; left: 10px;
-  background: rgba(255,255,255,0.92); backdrop-filter: blur(6px);
-  font-size: 10px; font-weight: 700; color: var(--accent);
-  padding: 3px 9px; border-radius: 100px; border: 1px solid rgba(37,99,235,0.2);
+  position: absolute; top: 10px; left: 10px;
+  background: rgba(255,255,255,0.92); backdrop-filter: blur(6px);
+  font-size: 10px; font-weight: 700; color: var(--accent);
+  padding: 3px 9px; border-radius: 100px; border: 1px solid rgba(37,99,235,0.2);
 }
 .module-body { padding: 16px 18px 20px; }
 .module-title { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 5px; }
@@ -390,26 +390,26 @@ h2 {
 .contact-detail-text { font-size: 14px; color: var(--muted); }
 .social-links-contact { display: flex; gap: 12px; margin-top: 26px; }
 .contact-form {
-  background: var(--bg); border: 1px solid rgba(37,99,235,0.1);
-  border-radius: 20px; padding: 36px;
-  box-shadow: 0 4px 24px rgba(37,99,235,0.06);
+  background: var(--bg); border: 1px solid rgba(37,99,235,0.1);
+  border-radius: 20px; padding: 36px;
+  box-shadow: 0 4px 24px rgba(37,99,235,0.06);
 }
 .form-group { margin-bottom: 18px; }
 .form-label { display: block; font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 7px; }
 .form-input, .form-textarea {
-  width: 100%; background: #fff; border: 1.5px solid rgba(37,99,235,0.15);
-  border-radius: 12px; padding: 12px 16px; color: var(--text);
-  font-family: 'DM Sans', sans-serif; font-size: 15px;
-  transition: border-color 0.2s, box-shadow 0.2s; outline: none;
+  width: 100%; background: #fff; border: 1.5px solid rgba(37,99,235,0.15);
+  border-radius: 12px; padding: 12px 16px; color: var(--text);
+  font-family: 'DM Sans', sans-serif; font-size: 15px;
+  transition: border-color 0.2s, box-shadow 0.2s; outline: none;
 }
 .form-input::placeholder, .form-textarea::placeholder { color: #cbd5e1; }
 .form-input:focus, .form-textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
 .form-textarea { min-height: 120px; resize: vertical; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .success-msg {
-  display: none; background: #f0fdf4; border: 1px solid #bbf7d0;
-  color: #16a34a; padding: 14px 20px; border-radius: 12px;
-  font-size: 14px; font-weight: 500; margin-top: 16px; text-align: center;
+  display: none; background: #f0fdf4; border: 1px solid #bbf7d0;
+  color: #16a34a; padding: 14px 20px; border-radius: 12px;
+  font-size: 14px; font-weight: 500; margin-top: 16px; text-align: center;
 }
 
 /* FOOTER */
@@ -428,21 +428,21 @@ footer { background: #0f172a; padding: 36px 40px; }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  nav { padding: 14px 20px; }
-  .nav-links-desktop { display: none; }
-  .hamburger { display: flex; }
-  #home { padding: 90px 20px 50px; }
-  .hero-grid { grid-template-columns: 1fr; gap: 36px; }
-  .hero-avatar-wrap { order: -1; }
-  .avatar-ring { width: 210px; height: 210px; }
-  section { padding: 60px 20px; }
-  .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 32px; }
-  .form-row { grid-template-columns: 1fr; }
-  .footer-inner { flex-direction: column; text-align: center; }
-  .modal-box { border-radius: 18px; }
-  .modal-header, .modal-body, .modal-footer { padding-left: 20px; padding-right: 20px; }
-  .modal-divider { margin-left: 20px; margin-right: 20px; }
-  .hero-actions { gap: 10px; }
+  nav { padding: 14px 20px; }
+  .nav-links-desktop { display: none; }
+  .hamburger { display: flex; }
+  #home { padding: 90px 20px 50px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+  .hero-avatar-wrap { order: -1; }
+  .avatar-ring { width: 210px; height: 210px; }
+  section { padding: 60px 20px; }
+  .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-inner { flex-direction: column; text-align: center; }
+  .modal-box { border-radius: 18px; }
+  .modal-header, .modal-body, .modal-footer { padding-left: 20px; padding-right: 20px; }
+  .modal-divider { margin-left: 20px; margin-right: 20px; }
+  .hero-actions { gap: 10px; }
 }
 </style>
 </head>
@@ -450,450 +450,415 @@ footer { background: #0f172a; padding: 36px 40px; }
 
 <!-- ══ STUDENT AGREEMENT MODAL ══ -->
 <div class="modal-overlay" id="agreementModal" onclick="handleOverlayClick(event)">
-  <div class="modal-box">
+  <div class="modal-box">
 
-    <div class="modal-header">
-      <div class="modal-header-left">
-        <div class="modal-icon-wrap">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-            <polyline points="14 2 14 8 20 8"/>
-            <line x1="16" y1="13" x2="8" y2="13"/>
-            <line x1="16" y1="17" x2="8" y2="17"/>
-          </svg>
-        </div>
-        <div class="modal-title-group">
-          <div class="modal-title">Student Agreement</div>
-          <div class="modal-subtitle">Digital Fab Lab — Academic Year 2025–26</div>
-        </div>
-      </div>
-      <button class="modal-close" onclick="closeAgreement()" title="Close">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-        </svg>
-      </button>
-    </div>
+    <div class="modal-header">
+      <div class="modal-header-left">
+        <div class="modal-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+          </svg>
+        </div>
+        <div class="modal-title-group">
+          <div class="modal-title">Student Agreement</div>
+          <div class="modal-subtitle">Digital Fab Lab — Academic Year 2025–26</div>
+        </div>
+      </div>
+      <button class="modal-close" onclick="closeAgreement()" title="Close">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
 
-    <div class="modal-divider"></div>
+    <div class="modal-divider"></div>
 
-    <div class="modal-body">
+    <div class="modal-body">
 
-      <div class="agreement-meta">
-        <span class="agreement-badge badge-purple">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          Effective: June 2025
-        </span>
-        <span class="agreement-badge badge-blue">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          Atharva Vinod Pande
-        </span>
-        <span class="agreement-badge badge-blue">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
-          SSGMCE, Shegaon — IT Dept.
-        </span>
-      </div>
+      <div class="agreement-meta">
+        
+        <span class="agreement-badge badge-blue">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Atharva Vinod Pande
+        </span>
+        <span class="agreement-badge badge-blue">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+          SSGMCE, Shegaon — IT Dept.
+        </span>
+      </div>
 
-      <div class="agreement-section">
-        <div class="agreement-section-title">1. Introduction</div>
-        <p class="agreement-text">
-          This Student Agreement ("Agreement") is entered into between <strong>Atharva Vinod Pande</strong> ("Student")
-          and the <strong>Digital Fabrication Laboratory</strong> at Shri Sant Gajanan Maharaj College of Engineering, Shegaon.
-          By participating in the Digital Fab Lab program, the Student agrees to abide by all terms and conditions
-          outlined herein for the academic year 2025–26.
-        </p>
-      </div>
+      <div class="agreement-section">
+        <div class="agreement-section-title">Fablab Student Agreement</div>
+        <p class="agreement-text">
+      
 
-      <div class="agreement-section">
-        <div class="agreement-section-title">2. Program Commitment</div>
-        <ul class="agreement-list">
-          <li>Complete all 10 assigned modules within the designated academic semester.</li>
-          <li>Attend a minimum of 80% of scheduled lab sessions and workshops.</li>
-          <li>Submit project work, documentation, and reflections on time via the designated platform.</li>
-          <li>Actively participate in peer reviews, group activities, and demonstrations.</li>
-          <li>Maintain and regularly update the personal portfolio website throughout the program.</li>
-        </ul>
-      </div>
+The FabLab, SSGMCE is responsible for:<br>
+	•	Teaching principles and practices of digital fabrication<br>
+	•	Arranging lectures, recitations, meetings, and events for the class<br>
+	•	Evaluating and providing feedback on student work<br>
+	•	Offering clear standards for completing assignments<br>
+	•	Certifying and archiving student progress<br>
+	•	Supervising class preparation<br>
+	•	Reviewing prospective students, instructors, and labs<br>
+	•	Providing central staff and infrastructure for students, instructors, and labs<br>
+	•	Fund-raising for costs not covered by student tuition<br>
+	•	Managing and reporting on the program’s finances, results, and impacts<br>
+	•	Publicizing the program<br>
 
-      <div class="agreement-section">
-        <div class="agreement-section-title">3. Code of Conduct</div>
-        <ul class="agreement-list">
-          <li>Treat all lab equipment, hardware, and software with care and responsibility.</li>
-          <li>Respect fellow students, mentors, and staff at all times within and outside the lab.</li>
-          <li>Uphold academic integrity — plagiarism, cheating, or misrepresentation of work is strictly prohibited.</li>
-          <li>All original work created during the program remains the intellectual property of the Student, with a non-exclusive license granted to the institution for educational use.</li>
-          <li>Report any damage, malfunction, or safety concern to a lab supervisor immediately.</li>
-        </ul>
-      </div>
 
-      <div class="agreement-section">
-        <div class="agreement-section-title">4. Use of Lab Resources</div>
-        <ul class="agreement-list">
-          <li>Lab computers, 3D printers, laser cutters, and IoT kits are for academic use only.</li>
-          <li>Any personal use of consumables beyond the allocated quota must be approved in advance.</li>
-          <li>Software licenses provided by the institution must not be transferred or misused.</li>
-          <li>The Student is responsible for backing up personal project files; the lab is not liable for data loss.</li>
-        </ul>
-      </div>
+I am a FabLab, SSGMCE student, responsible for:<br>
+	•	Attending class lectures and participating in reviews<br>
+	•	Developing and documenting projects assigned to introduce and demonstrate skills<br>
+	•	Honestly reporting on my work, and appropriately attributing the work of others<br>
+	•	Working safely<br>
+	•	Leaving workspaces in the same (or better) condition than I found them<br>
+	•	Participating in the upkeep of my lab<br>
+	•	Ensuring that my tuition to cover local and central class costs is covered<br>
+	•	Following locally applicable health and safety guidance<br>
+	•	Promoting a respectful environment free of harassment and discrimination<br>
 
-      <div class="agreement-section">
-        <div class="agreement-section-title">5. Assessment & Evaluation</div>
-        <p class="agreement-text">
-          The Student understands that performance is evaluated on module completion, project quality,
-          attendance, peer collaboration, and the quality of the portfolio website. Continuous assessment
-          is carried out throughout the semester, and a final presentation/review is mandatory for course
-          completion. Failure to meet the minimum criteria may result in course non-completion.
-        </p>
-      </div>
 
-      <div class="agreement-section">
-        <div class="agreement-section-title">6. Digital Presence & Portfolio</div>
-        <ul class="agreement-list">
-          <li>The Student agrees to maintain a professional and accurate portfolio website showcasing all module work.</li>
-          <li>Content published on the portfolio must be original, respectful, and appropriate for an academic audience.</li>
-          <li>The institution may feature the Student's portfolio as a showcase example with prior consent.</li>
-        </ul>
-      </div>
+✍️ Declaration<br>
 
-      <div class="signature-block">
-        <div>
-          <div class="sig-name">Atharva Pande</div>
-          <div class="sig-role">Student · Information Technology · SSGMCE Shegaon</div>
-        </div>
-        <div class="sig-line"></div>
-        <div class="sig-date">
-          <div style="font-weight:600;color:var(--text);font-size:13px;">Digitally Acknowledged</div>
-          <div>June 2025</div>
-        </div>
-      </div>
+Signed by committing this file in my repository,<br>
 
-    </div>
+Name: <u>Atharva. V. Pande</u>
+        </p>
+      </div>
 
-    <div class="modal-footer">
-      <button class="btn-modal-close" onclick="closeAgreement()">Close</button>
-      <button class="btn-modal-print" onclick="window.print()">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <polyline points="6 9 6 2 18 2 18 9"/>
-          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
-          <rect x="6" y="14" width="12" height="8"/>
-        </svg>
-        Print / Save
-      </button>
-    </div>
+    
 
-  </div>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn-modal-close" onclick="closeAgreement()">Close</button>
+      <button class="btn-modal-print" onclick="window.print()">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="6 9 6 2 18 2 18 9"/>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+          <rect x="6" y="14" width="12" height="8"/>
+        </svg>
+        Print / Save
+      </button>
+    </div>
+
+  </div>
 </div>
 <!-- ══ END MODAL ══ -->
 
 <!-- NAV -->
 <nav>
-  <a href="#home" class="nav-logo">Digital Fab Lab</a>
-  <ul class="nav-links-desktop">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#fablab">Fab Lab</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <div class="hamburger" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
-  </div>
+  <a href="#home" class="nav-logo">Digital Fab Lab</a>
+  <ul class="nav-links-desktop">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#fablab">Fab Lab</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#home" onclick="closeMenu()">Home</a>
-  <a href="#about" onclick="closeMenu()">About</a>
-  <a href="#education" onclick="closeMenu()">Education</a>
-  <a href="#projects" onclick="closeMenu()">Projects</a>
-  <a href="#fablab" onclick="closeMenu()">Fab Lab</a>
-  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="#home" onclick="closeMenu()">Home</a>
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#education" onclick="closeMenu()">Education</a>
+  <a href="#projects" onclick="closeMenu()">Projects</a>
+  <a href="#fablab" onclick="closeMenu()">Fab Lab</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
 </div>
 
 <!-- HERO -->
 <section id="home">
-  <div class="hero-bg"></div>
-  <div class="blob blob-1"></div>
-  <div class="blob blob-2"></div>
-  <div class="hero-grid">
-    <div class="hero-text fade-in">
-      <div class="hero-eyebrow"><span class="dot-pulse"></span>Available for work</div>
-      <h1>Hi, I'm <span class="hero-name-accent">Atharva<br>Pande</span></h1>
-      <p class="hero-sub">Designing ideas. Building websites. Exploring Web Development, AI/ML, and Embedded Systems.</p>
-      <div class="hero-actions">
-        <a href="atharvaresume.pdf" download class="btn-primary">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download Resume
-        </a>
+  <div class="hero-bg"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="hero-grid">
+    <div class="hero-text fade-in">
+      <div class="hero-eyebrow"><span class="dot-pulse"></span>Available for work</div>
+      <h1>Hi, I'm <span class="hero-name-accent">Atharva<br>Pande</span></h1>
+      <p class="hero-sub">Designing ideas. Building websites. Exploring Web Development, AI/ML, and Embedded Systems.</p>
+      <div class="hero-actions">
+        <a href="atharvaresume.pdf" download class="btn-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Resume
+        </a>
 
-        <!-- STUDENT AGREEMENT BUTTON -->
-        <button class="btn-agreement" onclick="openAgreement()">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-            <polyline points="14 2 14 8 20 8"/>
-            <line x1="16" y1="13" x2="8" y2="13"/>
-            <line x1="16" y1="17" x2="8" y2="17"/>
-          </svg>
-          Student Agreement
-        </button>
+        <!-- STUDENT AGREEMENT BUTTON -->
+        <button class="btn-agreement" onclick="openAgreement()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+          </svg>
+          Student Agreement
+        </button>
 
-        <a href="#contact" class="btn-outline">Let's Talk →</a>
-      </div>
-      <div class="social-row">
-        <a href="https://linkedin.com/in/atharva-pande-421824245" target="_blank" class="social-icon" title="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v2a6 6 0 0 1 2-2z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        </a>
-        <a href="https://instagram.com/atharva_pande05" target="_blank" class="social-icon" title="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        </a>
-        <a href="mailto:atharvapande2005@gmail.com" class="social-icon" title="Gmail">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </a>
-        <a href="https://github.com/atharvapande2005" target="_blank" class="social-icon" title="GitHub">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-        </a>
-      </div>
-    </div>
-    <div class="hero-avatar-wrap fade-in" style="transition-delay:0.2s">
-      <div class="avatar-ring">
-        <div class="avatar-photo">
-          <img src="atharva2.jpeg" alt="Atharva Pande">
-        </div>
-        <div class="avatar-badge">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-      </div>
-    </div>
-  </div>
+        <a href="#contact" class="btn-outline">Let's Talk →</a>
+      </div>
+      <div class="social-row">
+        <a href="https://linkedin.com/in/atharva-pande-421824245" target="_blank" class="social-icon" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v2a6 6 0 0 1 2-2z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://instagram.com/atharva_pande05" target="_blank" class="social-icon" title="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="mailto:atharvapande2005@gmail.com" class="social-icon" title="Gmail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+        <a href="https://github.com/atharvapande2005" target="_blank" class="social-icon" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-avatar-wrap fade-in" style="transition-delay:0.2s">
+      <div class="avatar-ring">
+        <div class="avatar-photo">
+          <img src="atharva2.jpeg" alt="Atharva Pande">
+        </div>
+        <div class="avatar-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-  <div class="section-inner">
-    <div class="section-label">About me</div>
-    <h2>Who I Am</h2>
-    <div class="about-grid">
-      <div class="fade-in">
-        <div class="code-box">
-          <div class="code-box-bar">
-            <div class="code-dot red"></div>
-            <div class="code-dot yellow"></div>
-            <div class="code-dot green"></div>
-          </div>
-          <span id="typing"></span><span class="cursor"></span>
-        </div>
-      </div>
-      <div class="fade-in" style="transition-delay:0.1s">
-        <p class="about-bio">I am a passionate learner exploring Web Development, AI/ML, and Embedded Systems. I enjoy building creative and functional projects that solve real problems and deliver great user experiences.</p>
-        <div class="skills-title">Tech Stack</div>
-        <div class="skills-wrap">
-          <span class="skill-tag">HTML5</span>
-          <span class="skill-tag">CSS3</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">C</span>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="section-inner">
+    <div class="section-label">About me</div>
+    <h2>Who I Am</h2>
+    <div class="about-grid">
+      <div class="fade-in">
+        <div class="code-box">
+          <div class="code-box-bar">
+            <div class="code-dot red"></div>
+            <div class="code-dot yellow"></div>
+            <div class="code-dot green"></div>
+          </div>
+          <span id="typing"></span><span class="cursor"></span>
+        </div>
+      </div>
+      <div class="fade-in" style="transition-delay:0.1s">
+        <p class="about-bio">I am a passionate learner exploring Web Development, AI/ML, and Embedded Systems. I enjoy building creative and functional projects that solve real problems and deliver great user experiences.</p>
+        <div class="skills-title">Tech Stack</div>
+        <div class="skills-wrap">
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS3</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">C</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- EDUCATION -->
 <section id="education">
-  <div class="section-inner">
-    <div class="section-label">Background</div>
-    <h2>Education</h2>
-    <div class="edu-timeline fade-in">
-      <div class="edu-item">
-        <div class="edu-card">
-          <div class="edu-year">2025 – Present</div>
-          <div class="edu-title">Shri Sant Gajanan Maharaj College of Engineering Shegaon — Information Technology</div>
-          <div class="edu-school">Shegaon</div>
-          <div class="edu-desc">Hands-on web development training, building real projects, and exploring maker culture through digital fabrication.</div>
-        </div>
-      </div>
-      <div class="edu-item">
-        <div class="edu-card">
-          <div class="edu-year">2022 – 2024</div>
-          <div class="edu-title">Higher Secondary Certificate (HSC)</div>
-          <div class="edu-school">RLT College of Science, Akola</div>
-        </div>
-      </div>
-      <div class="edu-item">
-        <div class="edu-card">
-          <div class="edu-year">Until 2022</div>
-          <div class="edu-title">Secondary School Certificate (SSC)</div>
-          <div class="edu-school">Hindu Dnyanpeeth Convent, Akola</div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="section-inner">
+    <div class="section-label">Background</div>
+    <h2>Education</h2>
+    <div class="edu-timeline fade-in">
+      <div class="edu-item">
+        <div class="edu-card">
+          <div class="edu-year">2025 – Present</div>
+          <div class="edu-title">Shri Sant Gajanan Maharaj College of Engineering Shegaon — Information Technology</div>
+          <div class="edu-school">Shegaon</div>
+          <div class="edu-desc">Hands-on web development training, building real projects, and exploring maker culture through digital fabrication.</div>
+        </div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-card">
+          <div class="edu-year">2022 – 2024</div>
+          <div class="edu-title">Higher Secondary Certificate (HSC)</div>
+          <div class="edu-school">RLT College of Science, Akola</div>
+        </div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-card">
+          <div class="edu-year">Until 2022</div>
+          <div class="edu-title">Secondary School Certificate (SSC)</div>
+          <div class="edu-school">Hindu Dnyanpeeth Convent, Akola</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-  <div class="section-inner">
-    <div class="section-label">Work</div>
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="card fade-in">
-        <div class="card-img-placeholder">🎧</div>
-        <div class="card-body">
-          <div class="card-title">Audiobook Website</div>
-          <div class="card-desc">A web platform to listen to audiobooks with a clean, accessible UI and smooth playback experience.</div>
-          <div class="card-tags"><span class="card-tag">HTML</span><span class="card-tag">CSS</span><span class="card-tag">JavaScript</span></div>
-          <a href="#" class="btn-card">View Project →</a>
-        </div>
-      </div>
-      <div class="card fade-in" style="transition-delay:0.1s">
-        <div class="card-img-placeholder">💼</div>
-        <div class="card-body">
-          <div class="card-title">Portfolio Website</div>
-          <div class="card-desc">My personal portfolio built using HTML, CSS, and JavaScript — showcasing projects and skills.</div>
-          <div class="card-tags"><span class="card-tag">HTML</span><span class="card-tag">CSS</span><span class="card-tag">JavaScript</span></div>
-          <a href="#" class="btn-card">View Project →</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="section-inner">
+    <div class="section-label">Work</div>
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="card fade-in">
+        <div class="card-img-placeholder">🎧</div>
+        <div class="card-body">
+          <div class="card-title">Audiobook Website</div>
+          <div class="card-desc">A web platform to listen to audiobooks with a clean, accessible UI and smooth playback experience.</div>
+          <div class="card-tags"><span class="card-tag">HTML</span><span class="card-tag">CSS</span><span class="card-tag">JavaScript</span></div>
+          <a href="#" class="btn-card">View Project →</a>
+        </div>
+      </div>
+      <div class="card fade-in" style="transition-delay:0.1s">
+        <div class="card-img-placeholder">💼</div>
+        <div class="card-body">
+          <div class="card-title">Portfolio Website</div>
+          <div class="card-desc">My personal portfolio built using HTML, CSS, and JavaScript — showcasing projects and skills.</div>
+          <div class="card-tags"><span class="card-tag">HTML</span><span class="card-tag">CSS</span><span class="card-tag">JavaScript</span></div>
+          <a href="#" class="btn-card">View Project →</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- FAB LAB -->
 <section id="fablab">
-  <div class="section-inner">
-    <div class="section-label">Learning</div>
-    <h2>Digital Fab Lab Modules</h2>
-    <div class="modules-grid">
+  <div class="section-inner">
+    <div class="section-label">Learning</div>
+    <h2>Digital Fab Lab Modules</h2>
+    <div class="modules-grid">
 
-      <div class="module-card fade-in" onclick="window.location.href='webdevelopment2.html'">
-        <div class="module-img" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe);">🖥️<span class="module-num">Module 1</span></div>
-        <div class="module-body"><div class="module-title">Web Development</div><div class="module-desc">HTML, CSS & JavaScript fundamentals — building interactive pages from scratch.</div></div>
-      </div>
+      <div class="module-card fade-in" onclick="window.location.href='webdevelopment2.html'">
+        <div class="module-img" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe);">🖥️<span class="module-num">Module 1</span></div>
+        <div class="module-body"><div class="module-title">Web Development</div><div class="module-desc">HTML, CSS & JavaScript fundamentals — building interactive pages from scratch.</div></div>
+      </div>
 
-      <div class="module-card fade-in" style="transition-delay:0.05s" onclick="window.location.href='module2.html'">
-        <div class="module-img" style="background:linear-gradient(135deg,#ede9fe,#ddd6fe);">🎨<span class="module-num">Module 2</span></div>
-        <div class="module-body"><div class="module-title">UI/UX Design</div><div class="module-desc">Figma, wireframing, prototyping, and user-centered design principles.</div></div>
-      </div>
+      <div class="module-card fade-in" style="transition-delay:0.05s" onclick="window.location.href='module2.html'">
+        <div class="module-img" style="background:linear-gradient(135deg,#ede9fe,#ddd6fe);">🎨<span class="module-num">Module 2</span></div>
+        <div class="module-body"><div class="module-title">UI/UX Design</div><div class="module-desc">Figma, wireframing, prototyping, and user-centered design principles.</div></div>
+      </div>
 
-      <div class="module-card fade-in" style="transition-delay:0.1s" onclick="window.location.href='module3.html'">
-        <div class="module-img" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);">🐍<span class="module-num">Module 3</span></div>
-        <div class="module-body"><div class="module-title">Computer Aided Designing</div><div class="module-desc">Study AutoCad using software like KiCad.</div></div>
-      </div>
+      <div class="module-card fade-in" style="transition-delay:0.1s" onclick="window.location.href='module3.html'">
+        <div class="module-img" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);">🐍<span class="module-num">Module 3</span></div>
+        <div class="module-body"><div class="module-title">Computer Aided Designing</div><div class="module-desc">Study AutoCad using software like KiCad.</div></div>
+      </div>
 
-      <div class="module-card fade-in" style="transition-delay:0.15s" onclick="window.location.href='module4.html'">
-        <div class="module-img" style="background:linear-gradient(135deg,#fef9c3,#fde68a);">🤖<span class="module-num">Module 4</span></div>
-        <div class="module-body"><div class="module-title">AI & Machine Learning</div><div class="module-desc">AI concepts, datasets, and building basic ML models.</div></div>
-      </div>
+      <div class="module-card fade-in" style="transition-delay:0.15s" onclick="window.location.href='module4.html'">
+        <div class="module-img" style="background:linear-gradient(135deg,#fef9c3,#fde68a);">🤖<span class="module-num">Module 4</span></div>
+        <div class="module-body"><div class="module-title">AI & Machine Learning</div><div class="module-desc">AI concepts, datasets, and building basic ML models.</div></div>
+      </div>
 
-      <div class="module-card fade-in" style="transition-delay:0.2s" onclick="window.location.href='module5.html'">
-        <div class="module-img" style="background:linear-gradient(135deg,#fee2e2,#fecaca);">⚙️<span class="module-num">Module 5</span></div>
-        <div class="module-body"><div class="module-title">IoT and Embedded Systems</div><div class="module-desc">Arduino, microcontrollers, sensors, and hardware programming.</div></div>
-      </div>
+      <div class="module-card fade-in" style="transition-delay:0.2s" onclick="window.location.href='module5.html'">
+        <div class="module-img" style="background:linear-gradient(135deg,#fee2e2,#fecaca);">⚙️<span class="module-num">Module 5</span></div>
+        <div class="module-body"><div class="module-title">IoT and Embedded Systems</div><div class="module-desc">Arduino, microcontrollers, sensors, and hardware programming.</div></div>
+      </div>
 
-      <div class="module-card fade-in" style="transition-delay:0.25s" onclick="window.location.href='module6.html'">
-        <div class="module-img" style="background:linear-gradient(135deg,#e0f2fe,#bae6fd);">🗄️<span class="module-num">Module 6</span></div>
-        <div class="module-body"><div class="module-title">Computer Aided Cutting</div><div class="module-desc">Study Laser cutting design and create new things.</div></div>
-      </div>
+      <div class="module-card fade-in" style="transition-delay:0.25s" onclick="window.location.href='module6.html'">
+        <div class="module-img" style="background:linear-gradient(135deg,#e0f2fe,#bae6fd);">🗄️<span class="module-num">Module 6</span></div>
+        <div class="module-body"><div class="module-title">Computer Aided Cutting</div><div class="module-desc">Study Laser cutting design and create new things.</div></div>
+      </div>
 
-      <div class="module-card fade-in" style="transition-delay:0.3s" onclick="window.location.href='module7.html'">
-        <div class="module-img" style="background:linear-gradient(135deg,#fce7f3,#fbcfe8);">📱<span class="module-num">Module 7</span></div>
-        <div class="module-body"><div class="module-title">3D Printing and Designing</div><div class="module-desc">Study 3D printer — how things print in a 3D printer.</div></div>
-      </div>
+      <div class="module-card fade-in" style="transition-delay:0.3s" onclick="window.location.href='module7.html'">
+        <div class="module-img" style="background:linear-gradient(135deg,#fce7f3,#fbcfe8);">📱<span class="module-num">Module 7</span></div>
+        <div class="module-body"><div class="module-title">3D Printing and Designing</div><div class="module-desc">Study 3D printer — how things print in a 3D printer.</div></div>
+      </div>
 
-      <div class="module-card fade-in" style="transition-delay:0.35s" onclick="window.location.href='module8.html'">
-        <div class="module-img" style="background:linear-gradient(135deg,#ecfdf5,#d1fae5);">🔒<span class="module-num">Module 8</span></div>
-        <div class="module-body"><div class="module-title">PCB Design</div><div class="module-desc">Study about PCB — how it's made and its different components.</div></div>
-      </div>
+      <div class="module-card fade-in" style="transition-delay:0.35s" onclick="window.location.href='module8.html'">
+        <div class="module-img" style="background:linear-gradient(135deg,#ecfdf5,#d1fae5);">🔒<span class="module-num">Module 8</span></div>
+        <div class="module-body"><div class="module-title">PCB Design</div><div class="module-desc">Study about PCB — how it's made and its different components.</div></div>
+      </div>
 
-      <div class="module-card fade-in" style="transition-delay:0.4s" onclick="window.location.href='module9.html'">
-        <div class="module-img" style="background:linear-gradient(135deg,#fff7ed,#fed7aa);">☁️<span class="module-num">Module 9</span></div>
-        <div class="module-body"><div class="module-title">Java</div><div class="module-desc">Learn Java programming language.</div></div>
-      </div>
+      <div class="module-card fade-in" style="transition-delay:0.4s" onclick="window.location.href='module9.html'">
+        <div class="module-img" style="background:linear-gradient(135deg,#fff7ed,#fed7aa);">☁️<span class="module-num">Module 9</span></div>
+        <div class="module-body"><div class="module-title">Java</div><div class="module-desc">Learn Java programming language.</div></div>
+      </div>
 
-      <div class="module-card fade-in" style="transition-delay:0.45s" onclick="window.location.href='module10.html'">
-        <div class="module-img" style="background:linear-gradient(135deg,#f5f3ff,#ede9fe);">🚀<span class="module-num">Module 10</span></div>
-        <div class="module-body"><div class="module-title">Networking</div><div class="module-desc">Connecting computers and devices to share data and communicate.</div></div>
-      </div>
+      <div class="module-card fade-in" style="transition-delay:0.45s" onclick="window.location.href='module10.html'">
+        <div class="module-img" style="background:linear-gradient(135deg,#f5f3ff,#ede9fe);">🚀<span class="module-num">Module 10</span></div>
+        <div class="module-body"><div class="module-title">Networking</div><div class="module-desc">Connecting computers and devices to share data and communicate.</div></div>
+      </div>
 
-    </div>
-  </div>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="section-inner">
-    <div class="section-label">Get in touch</div>
-    <h2>Let's Connect</h2>
-    <div class="contact-grid">
-      <div class="fade-in">
-        <div class="contact-info-title">Say Hello 👋</div>
-        <p class="contact-info-sub">Whether you have a project idea or just want to connect — my inbox is always open.</p>
-        <div class="contact-detail">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span class="contact-detail-text">atharvapande2005@gmail.com</span>
-        </div>
-        <div class="contact-detail">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span class="contact-detail-text">Akola, Maharashtra, India</span>
-        </div>
-        <div class="social-links-contact">
-          <a href="https://linkedin.com/in/atharva-pande-421824245" target="_blank" class="social-icon" title="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v2a6 6 0 0 1 2-2z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-          <a href="https://instagram.com/atharvapande05" target="_blank" class="social-icon" title="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <a href="mailto:atharvapande2005@gmail.com" class="social-icon" title="Gmail">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </a>
-        </div>
-      </div>
-      <div class="fade-in" style="transition-delay:0.1s">
-        <div class="contact-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label">Your Name</label>
-              <input type="text" class="form-input" placeholder="Full name" id="f-name">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Mobile Number</label>
-              <input type="tel" class="form-input" placeholder="+91 98765 43210" id="f-phone">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Email Address</label>
-            <input type="email" class="form-input" placeholder="you@email.com" id="f-email">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Message</label>
-            <textarea class="form-textarea" placeholder="Tell me about your project or idea..." id="f-msg"></textarea>
-          </div>
-          <button class="btn-primary" onclick="submitForm()" style="width:100%;justify-content:center;margin-top:4px;">
-            Send Message
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-          </button>
-          <div class="success-msg" id="successMsg">✓ Message sent! I'll get back to you soon.</div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="section-inner">
+    <div class="section-label">Get in touch</div>
+    <h2>Let's Connect</h2>
+    <div class="contact-grid">
+      <div class="fade-in">
+        <div class="contact-info-title">Say Hello 👋</div>
+        <p class="contact-info-sub">Whether you have a project idea or just want to connect — my inbox is always open.</p>
+        <div class="contact-detail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span class="contact-detail-text">atharvapande2005@gmail.com</span>
+        </div>
+        <div class="contact-detail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="contact-detail-text">Akola, Maharashtra, India</span>
+        </div>
+        <div class="social-links-contact">
+          <a href="https://linkedin.com/in/atharva-pande-421824245" target="_blank" class="social-icon" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v2a6 6 0 0 1 2-2z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://instagram.com/atharvapande05" target="_blank" class="social-icon" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="mailto:atharvapande2005@gmail.com" class="social-icon" title="Gmail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="fade-in" style="transition-delay:0.1s">
+        <div class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Your Name</label>
+              <input type="text" class="form-input" placeholder="Full name" id="f-name">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Mobile Number</label>
+              <input type="tel" class="form-input" placeholder="+91 98765 43210" id="f-phone">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-input" placeholder="you@email.com" id="f-email">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-textarea" placeholder="Tell me about your project or idea..." id="f-msg"></textarea>
+          </div>
+          <button class="btn-primary" onclick="submitForm()" style="width:100%;justify-content:center;margin-top:4px;">
+            Send Message
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <div class="success-msg" id="successMsg">✓ Message sent! I'll get back to you soon.</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-logo">Digital Fab Lab</div>
-    <div class="footer-copy">© 2026 Atharva Pande — Built with passion</div>
-    <div class="footer-social">
-      <a href="https://linkedin.com/in/atharva-pande-421824245" target="_blank" class="footer-si">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v2a6 6 0 0 1 2-2z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-      </a>
-      <a href="https://instagram.com/atharvapande05" target="_blank" class="footer-si">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-      </a>
-      <a href="mailto:atharvapande2005@gmail.com" class="footer-si">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      </a>
-    </div>
-  </div>
+  <div class="footer-inner">
+    <div class="footer-logo">Digital Fab Lab</div>
+    <div class="footer-copy">© 2026 Atharva Pande — Built with passion</div>
+    <div class="footer-social">
+      <a href="https://linkedin.com/in/atharva-pande-421824245" target="_blank" class="footer-si">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V9h4v2a6 6 0 0 1 2-2z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://instagram.com/atharvapande05" target="_blank" class="footer-si">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <a href="mailto:atharvapande2005@gmail.com" class="footer-si">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+    </div>
+  </div>
 </footer>
 
 <script>
@@ -907,10 +872,10 @@ goal = "Become a skilled developer"
 status = "Always_Learning"`;
 let i = 0;
 function typeEffect() {
-  if (i < codeText.length) {
-    document.getElementById("typing").textContent += codeText.charAt(i++);
-    setTimeout(typeEffect, 28);
-  }
+  if (i < codeText.length) {
+    document.getElementById("typing").textContent += codeText.charAt(i++);
+    setTimeout(typeEffect, 28);
+  }
 }
 typeEffect();
 
@@ -920,26 +885,26 @@ function closeMenu()  { document.getElementById('mobileMenu').classList.remove('
 
 /* CONTACT FORM */
 function submitForm() {
-  const name  = document.getElementById('f-name').value.trim();
-  const email = document.getElementById('f-email').value.trim();
-  const msg   = document.getElementById('f-msg').value.trim();
-  if (!name || !email || !msg) { alert('Please fill in your name, email, and message.'); return; }
-  document.getElementById('successMsg').style.display = 'block';
-  ['f-name','f-phone','f-email','f-msg'].forEach(id => document.getElementById(id).value = '');
-  setTimeout(() => { document.getElementById('successMsg').style.display = 'none'; }, 4000);
+  const name  = document.getElementById('f-name').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  const msg   = document.getElementById('f-msg').value.trim();
+  if (!name || !email || !msg) { alert('Please fill in your name, email, and message.'); return; }
+  document.getElementById('successMsg').style.display = 'block';
+  ['f-name','f-phone','f-email','f-msg'].forEach(id => document.getElementById(id).value = '');
+  setTimeout(() => { document.getElementById('successMsg').style.display = 'none'; }, 4000);
 }
 
 /* AGREEMENT MODAL */
 function openAgreement() {
-  document.getElementById('agreementModal').classList.add('open');
-  document.body.style.overflow = 'hidden';
+  document.getElementById('agreementModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
 }
 function closeAgreement() {
-  document.getElementById('agreementModal').classList.remove('open');
-  document.body.style.overflow = '';
+  document.getElementById('agreementModal').classList.remove('open');
+  document.body.style.overflow = '';
 }
 function handleOverlayClick(e) {
-  if (e.target === document.getElementById('agreementModal')) closeAgreement();
+  if (e.target === document.getElementById('agreementModal')) closeAgreement();
 }
 
 /* ESC to close */
@@ -947,9 +912,9 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAgreeme
 
 /* SCROLL FADE */
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 </body>
-</html>
+</html> this is code of my website now i want to add logo of digital fablab at top left side replace the text logo give me the code to do this
