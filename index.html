@@ -96,7 +96,7 @@ h1 {
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
 .hero-sub { font-size: 16px; color: var(--muted); line-height: 1.75; margin-bottom: 36px; max-width: 420px; }
-.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
 .btn-primary {
   display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px;
   background: linear-gradient(135deg, var(--accent), #1d4ed8); color: #fff;
@@ -112,6 +112,118 @@ h1 {
   border: 1.5px solid rgba(37,99,235,0.25); transition: all 0.25s; cursor: pointer;
 }
 .btn-outline:hover { border-color: var(--accent); background: var(--accent-light); transform: translateY(-2px); }
+
+/* AGREEMENT BUTTON */
+.btn-agreement {
+  display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px;
+  background: linear-gradient(135deg, #7c3aed, #5b21b6); color: #fff;
+  border-radius: 100px; font-weight: 600; font-size: 14px;
+  transition: all 0.25s; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(124,58,237,0.3); white-space: nowrap;
+}
+.btn-agreement:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(124,58,237,0.45); }
+
+/* MODAL OVERLAY */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 999;
+  background: rgba(15,23,42,0.55); backdrop-filter: blur(8px);
+  align-items: center; justify-content: center; padding: 20px;
+}
+.modal-overlay.open { display: flex; animation: fadeOverlay 0.25s ease; }
+@keyframes fadeOverlay { from { opacity: 0; } to { opacity: 1; } }
+
+.modal-box {
+  background: #fff; border-radius: 24px; max-width: 640px; width: 100%;
+  max-height: 88vh; display: flex; flex-direction: column;
+  box-shadow: 0 32px 80px rgba(15,23,42,0.25), 0 0 0 1px rgba(37,99,235,0.1);
+  animation: slideUp 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  overflow: hidden;
+}
+@keyframes slideUp { from { opacity: 0; transform: translateY(40px) scale(0.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+
+.modal-header {
+  padding: 28px 32px 0;
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+}
+.modal-header-left { display: flex; align-items: center; gap: 14px; }
+.modal-icon-wrap {
+  width: 48px; height: 48px; border-radius: 14px; flex-shrink: 0;
+  background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(124,58,237,0.2);
+}
+.modal-icon-wrap svg { color: #7c3aed; }
+.modal-title-group { display: flex; flex-direction: column; gap: 2px; }
+.modal-title { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; color: var(--text); letter-spacing: -0.5px; }
+.modal-subtitle { font-size: 12px; color: var(--muted); font-weight: 500; }
+.modal-close {
+  width: 36px; height: 36px; border-radius: 10px; border: 1.5px solid rgba(37,99,235,0.15);
+  background: var(--bg); display: flex; align-items: center; justify-content: center;
+  cursor: pointer; flex-shrink: 0; color: var(--muted); transition: all 0.2s;
+}
+.modal-close:hover { border-color: #ef4444; color: #ef4444; background: #fef2f2; transform: rotate(90deg); }
+
+.modal-divider { height: 1px; background: rgba(37,99,235,0.08); margin: 20px 32px 0; }
+
+.modal-body { flex: 1; overflow-y: auto; padding: 20px 32px 24px; }
+.modal-body::-webkit-scrollbar { width: 4px; }
+.modal-body::-webkit-scrollbar-thumb { background: rgba(124,58,237,0.3); border-radius: 2px; }
+
+.agreement-meta { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+.agreement-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase;
+  padding: 5px 12px; border-radius: 100px;
+}
+.badge-purple { background: #f5f3ff; color: #7c3aed; border: 1px solid rgba(124,58,237,0.2); }
+.badge-blue   { background: var(--accent-light); color: var(--accent); border: 1px solid rgba(37,99,235,0.2); }
+
+.agreement-section { margin-bottom: 22px; }
+.agreement-section-title {
+  font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700;
+  color: var(--text); letter-spacing: 0.3px; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 8px;
+}
+.agreement-section-title::before {
+  content: ''; display: inline-block; width: 4px; height: 14px;
+  border-radius: 2px; background: linear-gradient(180deg, var(--accent), var(--accent2));
+}
+.agreement-text { font-size: 13.5px; color: #475569; line-height: 1.78; }
+.agreement-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.agreement-list li { display: flex; gap: 10px; font-size: 13.5px; color: #475569; line-height: 1.65; }
+.agreement-list li::before { content: '✦'; color: var(--accent); font-size: 9px; margin-top: 4px; flex-shrink: 0; }
+
+.signature-block {
+  background: linear-gradient(135deg, #f8faff, #f5f3ff);
+  border: 1px solid rgba(37,99,235,0.12); border-radius: 14px;
+  padding: 16px 20px; margin-top: 20px; margin-bottom: 4px;
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.sig-name { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: var(--accent2); letter-spacing: -0.3px; }
+.sig-role { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.sig-line { flex: 1; height: 1px; background: rgba(37,99,235,0.1); min-width: 40px; }
+.sig-date { font-size: 12px; color: var(--muted); text-align: right; }
+
+.modal-footer {
+  padding: 16px 32px 24px; display: flex; gap: 12px; justify-content: flex-end;
+  border-top: 1px solid rgba(37,99,235,0.07);
+}
+.btn-modal-close {
+  padding: 11px 24px; border-radius: 100px; font-size: 13.5px; font-weight: 600;
+  border: 1.5px solid rgba(37,99,235,0.2); background: var(--bg); color: var(--muted);
+  cursor: pointer; transition: all 0.2s;
+}
+.btn-modal-close:hover { border-color: var(--accent); color: var(--accent); }
+.btn-modal-print {
+  padding: 11px 24px; border-radius: 100px; font-size: 13.5px; font-weight: 600;
+  background: linear-gradient(135deg, #7c3aed, #5b21b6); color: #fff;
+  border: none; cursor: pointer; transition: all 0.25s;
+  display: flex; align-items: center; gap: 8px;
+  box-shadow: 0 4px 14px rgba(124,58,237,0.3);
+}
+.btn-modal-print:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(124,58,237,0.4); }
+
+/* SOCIAL */
 .social-row { display: flex; gap: 12px; margin-top: 28px; }
 .social-icon {
   width: 40px; height: 40px; border-radius: 12px;
@@ -131,10 +243,7 @@ h1 {
   background: conic-gradient(var(--accent), var(--accent2), #60a5fa, var(--accent));
   animation: spin 8s linear infinite;
 }
-.avatar-ring::after {
-  content: ''; position: absolute; inset: -1px; border-radius: 50%;
-  background: var(--bg);
-}
+.avatar-ring::after { content: ''; position: absolute; inset: -1px; border-radius: 50%; background: var(--bg); }
 @keyframes spin { to { transform: rotate(360deg); } }
 .avatar-photo {
   position: absolute; inset: 9px; z-index: 2; border-radius: 50%;
@@ -143,18 +252,6 @@ h1 {
   overflow: hidden; border: 3px solid #fff;
 }
 .avatar-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
-.avatar-silhouette {
-  display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
-  width: 100%; height: 100%; padding-bottom: 0;
-}
-.silhouette-head {
-  width: 82px; height: 82px; border-radius: 50%;
-  background: linear-gradient(135deg, #93c5fd, #a5b4fc); margin-bottom: -4px; flex-shrink: 0;
-}
-.silhouette-body {
-  width: 144px; height: 92px; border-radius: 72px 72px 0 0;
-  background: linear-gradient(135deg, #60a5fa, #818cf8);
-}
 .avatar-badge {
   position: absolute; bottom: 18px; right: 6px; z-index: 3;
   background: #fff; border: 1.5px solid rgba(37,99,235,0.15);
@@ -194,11 +291,7 @@ h2 {
 .code-dot.yellow { background: #f59e0b; }
 .code-dot.green { background: #22c55e; }
 #typing { color: #86efac; line-height: 1.85; white-space: pre-wrap; }
-.cursor {
-  display: inline-block; width: 8px; height: 15px;
-  background: #38bdf8; vertical-align: middle;
-  animation: blink 1s step-end infinite;
-}
+.cursor { display: inline-block; width: 8px; height: 15px; background: #38bdf8; vertical-align: middle; animation: blink 1s step-end infinite; }
 @keyframes blink { 50% { opacity: 0; } }
 .about-bio { font-size: 15.5px; color: #475569; line-height: 1.85; margin-bottom: 28px; }
 .skills-title { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 14px; color: var(--text); }
@@ -267,7 +360,7 @@ h2 {
 }
 .btn-card:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
 
-/* FABLAB MODULES */
+/* FABLAB */
 #fablab { background: var(--bg); }
 .modules-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
 .module-card {
@@ -276,10 +369,7 @@ h2 {
   transition: all 0.28s; box-shadow: 0 2px 12px rgba(37,99,235,0.05);
 }
 .module-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); border-color: rgba(37,99,235,0.3); }
-.module-img {
-  height: 130px; display: flex; align-items: center; justify-content: center;
-  font-size: 42px; position: relative;
-}
+.module-img { height: 130px; display: flex; align-items: center; justify-content: center; font-size: 42px; position: relative; }
 .module-num {
   position: absolute; top: 10px; left: 10px;
   background: rgba(255,255,255,0.92); backdrop-filter: blur(6px);
@@ -349,10 +439,150 @@ footer { background: #0f172a; padding: 36px 40px; }
   .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 32px; }
   .form-row { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; text-align: center; }
+  .modal-box { border-radius: 18px; }
+  .modal-header, .modal-body, .modal-footer { padding-left: 20px; padding-right: 20px; }
+  .modal-divider { margin-left: 20px; margin-right: 20px; }
+  .hero-actions { gap: 10px; }
 }
 </style>
 </head>
 <body>
+
+<!-- ══ STUDENT AGREEMENT MODAL ══ -->
+<div class="modal-overlay" id="agreementModal" onclick="handleOverlayClick(event)">
+  <div class="modal-box">
+
+    <div class="modal-header">
+      <div class="modal-header-left">
+        <div class="modal-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+          </svg>
+        </div>
+        <div class="modal-title-group">
+          <div class="modal-title">Student Agreement</div>
+          <div class="modal-subtitle">Digital Fab Lab — Academic Year 2025–26</div>
+        </div>
+      </div>
+      <button class="modal-close" onclick="closeAgreement()" title="Close">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="modal-divider"></div>
+
+    <div class="modal-body">
+
+      <div class="agreement-meta">
+        <span class="agreement-badge badge-purple">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Effective: June 2025
+        </span>
+        <span class="agreement-badge badge-blue">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Atharva Vinod Pande
+        </span>
+        <span class="agreement-badge badge-blue">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+          SSGMCE, Shegaon — IT Dept.
+        </span>
+      </div>
+
+      <div class="agreement-section">
+        <div class="agreement-section-title">1. Introduction</div>
+        <p class="agreement-text">
+          This Student Agreement ("Agreement") is entered into between <strong>Atharva Vinod Pande</strong> ("Student")
+          and the <strong>Digital Fabrication Laboratory</strong> at Shri Sant Gajanan Maharaj College of Engineering, Shegaon.
+          By participating in the Digital Fab Lab program, the Student agrees to abide by all terms and conditions
+          outlined herein for the academic year 2025–26.
+        </p>
+      </div>
+
+      <div class="agreement-section">
+        <div class="agreement-section-title">2. Program Commitment</div>
+        <ul class="agreement-list">
+          <li>Complete all 10 assigned modules within the designated academic semester.</li>
+          <li>Attend a minimum of 80% of scheduled lab sessions and workshops.</li>
+          <li>Submit project work, documentation, and reflections on time via the designated platform.</li>
+          <li>Actively participate in peer reviews, group activities, and demonstrations.</li>
+          <li>Maintain and regularly update the personal portfolio website throughout the program.</li>
+        </ul>
+      </div>
+
+      <div class="agreement-section">
+        <div class="agreement-section-title">3. Code of Conduct</div>
+        <ul class="agreement-list">
+          <li>Treat all lab equipment, hardware, and software with care and responsibility.</li>
+          <li>Respect fellow students, mentors, and staff at all times within and outside the lab.</li>
+          <li>Uphold academic integrity — plagiarism, cheating, or misrepresentation of work is strictly prohibited.</li>
+          <li>All original work created during the program remains the intellectual property of the Student, with a non-exclusive license granted to the institution for educational use.</li>
+          <li>Report any damage, malfunction, or safety concern to a lab supervisor immediately.</li>
+        </ul>
+      </div>
+
+      <div class="agreement-section">
+        <div class="agreement-section-title">4. Use of Lab Resources</div>
+        <ul class="agreement-list">
+          <li>Lab computers, 3D printers, laser cutters, and IoT kits are for academic use only.</li>
+          <li>Any personal use of consumables beyond the allocated quota must be approved in advance.</li>
+          <li>Software licenses provided by the institution must not be transferred or misused.</li>
+          <li>The Student is responsible for backing up personal project files; the lab is not liable for data loss.</li>
+        </ul>
+      </div>
+
+      <div class="agreement-section">
+        <div class="agreement-section-title">5. Assessment & Evaluation</div>
+        <p class="agreement-text">
+          The Student understands that performance is evaluated on module completion, project quality,
+          attendance, peer collaboration, and the quality of the portfolio website. Continuous assessment
+          is carried out throughout the semester, and a final presentation/review is mandatory for course
+          completion. Failure to meet the minimum criteria may result in course non-completion.
+        </p>
+      </div>
+
+      <div class="agreement-section">
+        <div class="agreement-section-title">6. Digital Presence & Portfolio</div>
+        <ul class="agreement-list">
+          <li>The Student agrees to maintain a professional and accurate portfolio website showcasing all module work.</li>
+          <li>Content published on the portfolio must be original, respectful, and appropriate for an academic audience.</li>
+          <li>The institution may feature the Student's portfolio as a showcase example with prior consent.</li>
+        </ul>
+      </div>
+
+      <div class="signature-block">
+        <div>
+          <div class="sig-name">Atharva Pande</div>
+          <div class="sig-role">Student · Information Technology · SSGMCE Shegaon</div>
+        </div>
+        <div class="sig-line"></div>
+        <div class="sig-date">
+          <div style="font-weight:600;color:var(--text);font-size:13px;">Digitally Acknowledged</div>
+          <div>June 2025</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn-modal-close" onclick="closeAgreement()">Close</button>
+      <button class="btn-modal-print" onclick="window.print()">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="6 9 6 2 18 2 18 9"/>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+          <rect x="6" y="14" width="12" height="8"/>
+        </svg>
+        Print / Save
+      </button>
+    </div>
+
+  </div>
+</div>
+<!-- ══ END MODAL ══ -->
 
 <!-- NAV -->
 <nav>
@@ -394,6 +624,18 @@ footer { background: #0f172a; padding: 36px 40px; }
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Download Resume
         </a>
+
+        <!-- STUDENT AGREEMENT BUTTON -->
+        <button class="btn-agreement" onclick="openAgreement()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+          </svg>
+          Student Agreement
+        </button>
+
         <a href="#contact" class="btn-outline">Let's Talk →</a>
       </div>
       <div class="social-row">
@@ -415,11 +657,9 @@ footer { background: #0f172a; padding: 36px 40px; }
       <div class="avatar-ring">
         <div class="avatar-photo">
           <img src="atharva2.jpeg" alt="Atharva Pande">
-
         </div>
         <div class="avatar-badge">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-
         </div>
       </div>
     </div>
@@ -450,8 +690,7 @@ footer { background: #0f172a; padding: 36px 40px; }
           <span class="skill-tag">CSS3</span>
           <span class="skill-tag">JavaScript</span>
           <span class="skill-tag">C</span>
-
-       </div>
+        </div>
       </div>
     </div>
   </div>
@@ -466,7 +705,7 @@ footer { background: #0f172a; padding: 36px 40px; }
       <div class="edu-item">
         <div class="edu-card">
           <div class="edu-year">2025 – Present</div>
-          <div class="edu-title">Shri Sant Gajanan Maharaj College of Engineerng Shegaon-Information Technology</div>
+          <div class="edu-title">Shri Sant Gajanan Maharaj College of Engineering Shegaon — Information Technology</div>
           <div class="edu-school">Shegaon</div>
           <div class="edu-desc">Hands-on web development training, building real projects, and exploring maker culture through digital fabrication.</div>
         </div>
@@ -476,15 +715,13 @@ footer { background: #0f172a; padding: 36px 40px; }
           <div class="edu-year">2022 – 2024</div>
           <div class="edu-title">Higher Secondary Certificate (HSC)</div>
           <div class="edu-school">RLT College of Science, Akola</div>
-
         </div>
       </div>
       <div class="edu-item">
         <div class="edu-card">
           <div class="edu-year">Until 2022</div>
           <div class="edu-title">Secondary School Certificate (SSC)</div>
-          <div class="edu-school">Hindu Dnyanpeeth Convent , Akola</div>
-
+          <div class="edu-school">Hindu Dnyanpeeth Convent, Akola</div>
         </div>
       </div>
     </div>
@@ -519,7 +756,7 @@ footer { background: #0f172a; padding: 36px 40px; }
   </div>
 </section>
 
-<!-- FAB LAB — 10 MODULES -->
+<!-- FAB LAB -->
 <section id="fablab">
   <div class="section-inner">
     <div class="section-label">Learning</div>
@@ -528,82 +765,52 @@ footer { background: #0f172a; padding: 36px 40px; }
 
       <div class="module-card fade-in" onclick="window.location.href='webdevelopment2.html'">
         <div class="module-img" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe);">🖥️<span class="module-num">Module 1</span></div>
-        <div class="module-body">
-          <div class="module-title">Web Development</div>
-          <div class="module-desc">HTML, CSS & JavaScript fundamentals — building interactive pages from scratch.</div>
-        </div>
+        <div class="module-body"><div class="module-title">Web Development</div><div class="module-desc">HTML, CSS & JavaScript fundamentals — building interactive pages from scratch.</div></div>
       </div>
 
       <div class="module-card fade-in" style="transition-delay:0.05s" onclick="window.location.href='module2.html'">
         <div class="module-img" style="background:linear-gradient(135deg,#ede9fe,#ddd6fe);">🎨<span class="module-num">Module 2</span></div>
-        <div class="module-body">
-          <div class="module-title">UI/UX Design</div>
-          <div class="module-desc">Figma, wireframing, prototyping, and user-centered design principles.</div>
-        </div>
+        <div class="module-body"><div class="module-title">UI/UX Design</div><div class="module-desc">Figma, wireframing, prototyping, and user-centered design principles.</div></div>
       </div>
 
       <div class="module-card fade-in" style="transition-delay:0.1s" onclick="window.location.href='module3.html'">
         <div class="module-img" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);">🐍<span class="module-num">Module 3</span></div>
-        <div class="module-body">
-          <div class="module-title">Computer Aided Designing</div>
-          <div class="module-descCo">Study AutoCad using software like KiCad.</div>
-        </div>
+        <div class="module-body"><div class="module-title">Computer Aided Designing</div><div class="module-desc">Study AutoCad using software like KiCad.</div></div>
       </div>
 
       <div class="module-card fade-in" style="transition-delay:0.15s" onclick="window.location.href='module4.html'">
         <div class="module-img" style="background:linear-gradient(135deg,#fef9c3,#fde68a);">🤖<span class="module-num">Module 4</span></div>
-        <div class="module-body">
-          <div class="module-title">AI & Machine Learning</div>
-          <div class="module-desc">AI concepts, datasets, and building basic ML models.</div>
-        </div>
+        <div class="module-body"><div class="module-title">AI & Machine Learning</div><div class="module-desc">AI concepts, datasets, and building basic ML models.</div></div>
       </div>
 
       <div class="module-card fade-in" style="transition-delay:0.2s" onclick="window.location.href='module5.html'">
         <div class="module-img" style="background:linear-gradient(135deg,#fee2e2,#fecaca);">⚙️<span class="module-num">Module 5</span></div>
-        <div class="module-body">
-          <div class="module-title">IoT and Embedded Systems</div>
-          <div class="module-desc">Arduino, microcontrollers, sensors, and hardware programming.</div>
-        </div>
+        <div class="module-body"><div class="module-title">IoT and Embedded Systems</div><div class="module-desc">Arduino, microcontrollers, sensors, and hardware programming.</div></div>
       </div>
 
       <div class="module-card fade-in" style="transition-delay:0.25s" onclick="window.location.href='module6.html'">
         <div class="module-img" style="background:linear-gradient(135deg,#e0f2fe,#bae6fd);">🗄️<span class="module-num">Module 6</span></div>
-        <div class="module-body">
-          <div class="module-title"> Computer Aided Cutting </div>
-          <div class="module-desc">Study Laser cutting design and create new things</div>
-        </div>
+        <div class="module-body"><div class="module-title">Computer Aided Cutting</div><div class="module-desc">Study Laser cutting design and create new things.</div></div>
       </div>
 
       <div class="module-card fade-in" style="transition-delay:0.3s" onclick="window.location.href='module7.html'">
         <div class="module-img" style="background:linear-gradient(135deg,#fce7f3,#fbcfe8);">📱<span class="module-num">Module 7</span></div>
-        <div class="module-body">
-          <div class="module-title">3D printing and designing</div>
-          <div class="module-desc">Study 3D printer how things print in 3D printer </div>
-        </div>
+        <div class="module-body"><div class="module-title">3D Printing and Designing</div><div class="module-desc">Study 3D printer — how things print in a 3D printer.</div></div>
       </div>
 
       <div class="module-card fade-in" style="transition-delay:0.35s" onclick="window.location.href='module8.html'">
         <div class="module-img" style="background:linear-gradient(135deg,#ecfdf5,#d1fae5);">🔒<span class="module-num">Module 8</span></div>
-        <div class="module-body">
-          <div class="module-title">PCB design</div>
-          <div class="module-desc">Study about PCB how it made study its diffrent components</div>
-        </div>
+        <div class="module-body"><div class="module-title">PCB Design</div><div class="module-desc">Study about PCB — how it's made and its different components.</div></div>
       </div>
 
       <div class="module-card fade-in" style="transition-delay:0.4s" onclick="window.location.href='module9.html'">
         <div class="module-img" style="background:linear-gradient(135deg,#fff7ed,#fed7aa);">☁️<span class="module-num">Module 9</span></div>
-        <div class="module-body">
-          <div class="module-title">java </div>
-          <div class="module-desc">learn Java programming language </div>
-        </div>
+        <div class="module-body"><div class="module-title">Java</div><div class="module-desc">Learn Java programming language.</div></div>
       </div>
 
       <div class="module-card fade-in" style="transition-delay:0.45s" onclick="window.location.href='module10.html'">
         <div class="module-img" style="background:linear-gradient(135deg,#f5f3ff,#ede9fe);">🚀<span class="module-num">Module 10</span></div>
-        <div class="module-body">
-          <div class="module-title">Networking</div>
-          <div class="module-desc">Connecting computer and devices to share data and communicate</div>
-        </div>
+        <div class="module-body"><div class="module-title">Networking</div><div class="module-desc">Connecting computers and devices to share data and communicate.</div></div>
       </div>
 
     </div>
@@ -690,6 +897,7 @@ footer { background: #0f172a; padding: 36px 40px; }
 </footer>
 
 <script>
+/* TYPING EFFECT */
 const codeText =
 `name = "Atharva Vinod Pande"
 role = "Web Dev Student"
@@ -697,30 +905,47 @@ learning_at = "Digital Fab Lab"
 skills = ["HTML","CSS","JS","C"]
 goal = "Become a skilled developer"
 status = "Always_Learning"`;
-
 let i = 0;
 function typeEffect() {
   if (i < codeText.length) {
-    document.getElementById("typing").textContent += codeText.charAt(i);
-    i++;
+    document.getElementById("typing").textContent += codeText.charAt(i++);
     setTimeout(typeEffect, 28);
   }
 }
 typeEffect();
 
+/* MOBILE MENU */
 function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
-function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+function closeMenu()  { document.getElementById('mobileMenu').classList.remove('open'); }
 
+/* CONTACT FORM */
 function submitForm() {
-  const name = document.getElementById('f-name').value.trim();
+  const name  = document.getElementById('f-name').value.trim();
   const email = document.getElementById('f-email').value.trim();
-  const msg = document.getElementById('f-msg').value.trim();
+  const msg   = document.getElementById('f-msg').value.trim();
   if (!name || !email || !msg) { alert('Please fill in your name, email, and message.'); return; }
   document.getElementById('successMsg').style.display = 'block';
   ['f-name','f-phone','f-email','f-msg'].forEach(id => document.getElementById(id).value = '');
   setTimeout(() => { document.getElementById('successMsg').style.display = 'none'; }, 4000);
 }
 
+/* AGREEMENT MODAL */
+function openAgreement() {
+  document.getElementById('agreementModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeAgreement() {
+  document.getElementById('agreementModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('agreementModal')) closeAgreement();
+}
+
+/* ESC to close */
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAgreement(); });
+
+/* SCROLL FADE */
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.1 });
